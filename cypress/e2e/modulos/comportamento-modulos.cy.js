@@ -25,13 +25,18 @@ describe('Módulos - Navegação completa (Fluxo do usuário)', () => {
     cy.location('href', { timeout: 20000 })
       .should('not.include', 'painel-modulos')
 
-    // Saiu do accessToken
-    cy.location('href')
-      .should('not.include', 'accessToken')
-
-    // URL correta
-    cy.location('href')
+    // 1. Garante que entrou no módulo
+    cy.location('href', { timeout: 20000 })
       .should('include', modulo.url)
+
+   // 2. Aguarda remoção do accessToken
+    cy.location('href')
+      .should((url) => {
+
+    expect(url, 'accessToken deve ser removido após carregamento')
+      .not.to.include('accessToken')
+
+  })
 
     // Renderização
     cy.get('body').should('be.visible')

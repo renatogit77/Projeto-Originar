@@ -1,3 +1,5 @@
+import { modulos } from '../../support/data/modulos'
+
 describe('Módulos - Navegação completa (Fluxo do usuário)', () => {
 
   beforeEach(() => {
@@ -7,55 +9,6 @@ describe('Módulos - Navegação completa (Fluxo do usuário)', () => {
       cy.spy(win.console, 'error').as('consoleError')
     })
   })
-
-  const modulos = [
-    {
-      nome: 'Levantamentos',
-      seletor: 'a[href*="/originar/"]',
-      url: '/originar/#/',
-    },
-    {
-      nome: 'Delimitar Fazenda',
-      seletor: 'a[href*="/fazenda/"]',
-      url: '/fazenda/',
-    },
-    {
-      nome: 'Sustentabilidade',
-      seletor: 'a[href*="/sustentabilidade/"]',
-      url: '/sustentabilidade/caixaentrada',
-    },
-    {
-      nome: 'Inteligência',
-      seletor: 'a[href*="/inteligencia/"]',
-      url: '/inteligencia/',
-    },
-    {
-      nome: 'Monitoramento',
-      seletor: 'a[href*="/monitoramento/"]',
-      url: '/monitoramento/#/',
-      elementoChave: '.leaflet-container'
-    },
-    {
-      nome: 'Farmer Selling',
-      seletor: 'a[href*="/farmer"]',
-      url: '/farmer-selling/dashboard',
-    },
-    {
-      nome: 'Informativo Semanal',
-      seletor: 'a[href*="/informativo"]',
-      url: '/informativo-semanal/dashboard',
-    },
-    {
-      nome: 'Painel Originar',
-      seletor: 'a[href*="/painel"]',
-      url: '/painel-originar/credito/geral',
-    },
-    {
-      nome: 'Parametrização',
-      seletor: 'a[href*="/parametrizacao"]',
-      url: '/parametrizacao/',
-    }
-  ]
 
   const acessarModulo = (modulo) => {
 

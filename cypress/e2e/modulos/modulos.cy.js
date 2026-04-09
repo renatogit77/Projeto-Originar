@@ -1,4 +1,6 @@
 
+import { modulos } from '../../support/data/modulos'
+
 describe('Módulos - Dashboard', () => {
 
   beforeEach(() => {
@@ -31,65 +33,6 @@ describe('Módulos - Dashboard', () => {
     })
 
   })
-
-  // =========================
-  // CONFIGURAÇÃO DOS MÓDULOS
-  // =========================
-  const modulos = [
-    {
-      nome: 'Levantamentos',
-      seletor: 'a[href*="/originar/"]',
-      url: '/originar/#/',
-      api: '**levantamentoSafra**'
-    },
-    {
-      nome: 'Delimitar Fazenda',
-      seletor: 'a[href*="/fazenda/"]',
-      url: '/fazenda/',
-      api: '**fazendas**'
-    },
-    {
-      nome: 'Sustentabilidade',
-      seletor: 'a[href*="/sustentabilidade/"]',
-      url: '/sustentabilidade/caixaentrada',
-      api: '**StatusSolicitacao**'
-    },
-    {
-      nome: 'Inteligência',
-      seletor: 'a[href*="/inteligencia/"]',
-      url: '/inteligencia/',
-      api: '**mapa/camadas**'
-    },
-    {
-      nome: 'Monitoramento',
-      seletor: 'a[href*="/monitoramento/"]',
-      url: '/monitoramento/#/',
-      api: '**levantamentoSafra**'
-    },
-    {
-      nome: 'Farmer Selling',
-      seletor: 'a[href*="/farmer"]',
-      url: '/farmer-selling/dashboard',
-      api: '**buscarDadosQuantitativos**'
-    },
-    {
-      nome: 'Informativo Semanal',
-      seletor: 'a[href*="/informativo"]',
-      url: '/informativo-semanal/dashboard',
-      api: '**dadosTabulares**'
-    },
-    {
-      nome: 'Painel Originar',
-      seletor: 'a[href*="/painel"]',
-      url: '/painel-originar/credito/geral',
-      api: '**grafico**'
-    },
-    {
-      nome: 'Parametrização',
-      seletor: 'a[href*="/parametrizacao"]',
-      url: '/parametrizacao/'
-    }
-  ]
 
   // =========================
   // TESTES DE NAVEGAÇÃO DOS MÓDULOS

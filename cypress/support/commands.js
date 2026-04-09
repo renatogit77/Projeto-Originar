@@ -58,7 +58,7 @@ Cypress.Commands.add('loginCompleto', () => {
 
     cy.contains('button', 'Selecionar').click()
 
-    // 🔥 valida fluxo
+    // valida fluxo
     cy.location('pathname', { timeout: 20000 })
       .should((pathname) => {
 
@@ -72,7 +72,7 @@ Cypress.Commands.add('loginCompleto', () => {
     cy.location('href')
       .should('not.include', 'accessToken')
 
-    // 🔥 garante ambiente correto
+    // garante ambiente correto
     cy.location('origin')
       .should('eq', baseUrl)
 
@@ -92,7 +92,7 @@ Cypress.Commands.add('loginCompleto', () => {
 }
   })
 
-  // 🔥 navegação segura
+  // navegação segura
   cy.visit('/portal-seguranca/painel-modulos')
 
   cy.location('origin')

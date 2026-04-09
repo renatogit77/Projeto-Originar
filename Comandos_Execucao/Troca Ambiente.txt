@@ -1,3 +1,4 @@
+npx cypress open
 npx cypress open --env ambiente=hmg
 
 npx cypress run --env ambiente=tst
